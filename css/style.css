@@ -3,14 +3,13 @@
 html {
     color: #ffffff;
     scroll-behavior: smooth;
-    margin: 0 auto;
 }
 
 body {
     font-family: "K2D", sans-serif;
-    margin: 0 auto;
-    width: 1310px;
-    background: linear-gradient(150deg, #122030,#485c8d, #2d3958,#3F6487);
+    margin: 0px auto;
+    max-width: 1337;
+    background: linear-gradient(150deg, #122030, #485c8d, #2d3958, #3F6487);
     background-size: 120% 120%;
     overflow-x: hidden;
 }
@@ -18,6 +17,7 @@ body {
 /*CABEÇALHO*/
 
 header.cabecalho {
+    max-width: 100%px;
     display: flex;
     font-family: "K2D", sans-serif;
     justify-content: space-between;
@@ -26,7 +26,7 @@ header.cabecalho {
     line-height: 30px;
 }
 
-hr{
+hr {
     margin: 0px;
 }
 
@@ -87,8 +87,8 @@ nav.menu li a {
     display: flex;
     min-height: calc(100vh - 125px);
     align-items: center;
+    justify-content: center;
     gap: 50px;
-    justify-content: space-between;
     padding: 10px;
 }
 
@@ -173,30 +173,44 @@ nav.menu li a {
 .section-2 {
     display: flex;
     padding: 10px;
-    max-height: 646px;
+    width: 100%;
+    justify-content: center;
+
+}
+
+div#sobre {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    padding: 100px 10px 10px 10px;
 }
 
 .section-2 h2 {
+    max-width: 100%;
+    max-height: 100%;
     font-size: 40px;
     font-weight: normal;
-    padding: 400px 0px 0px 100px;
+    padding: 300px 50px 0px 50px;
+
+}
+
+.redes-sociais {
+    display: block;
 }
 
 .section-2 .foto {
-    max-width: 300px;
-    width: 100%;
+    width: 300px;
+    height: 300px;
     border: 10px solid #7796F2;
-    position: relative;
-    bottom: 450px;
-    left: 300px;
+
 }
 
 .section-2 .redes-sociais {
     display: flex;
     width: 320px;
-    position: relative;
     left: 300px;
     bottom: 450px;
+
 
 }
 
@@ -233,21 +247,19 @@ nav.menu li a {
 }
 
 .section-2 p {
-    position: relative;
     left: 650px;
     bottom: 900px;
     margin-bottom: 20px;
-    padding: 0px 80px 0px 20px;
+    padding: 0px 0px 0px 50px;
     max-width: 40%;
     font-family: "K2D", sans-serif;
     font-size: 20px;
 }
 
 .section-3 {
-    align-items: center;
     gap: 50px;
-    justify-content: space-between;
     padding: 10px;
+    margin: 100px auto;
 }
 
 .section-3 h2 {
@@ -255,7 +267,7 @@ nav.menu li a {
     text-align: left;
     font-weight: normal;
     padding: 0px 0px 0px 100px;
-    margin-bottom: 10px;
+    margin: 0px 0px 10px 0px;
 }
 
 .section-3 p {
@@ -268,6 +280,7 @@ nav.menu li a {
 
 .section-3 .container-lista-hf ul {
     display: flex;
+    justify-content: center;
     background-color: #232D49;
     border-radius: 40px;
     margin: 50px 10px;
@@ -281,6 +294,13 @@ nav.menu li a {
     margin: 0px;
     padding: 0px 40px;
     text-align: center;
+    transition: transform 500ms cubic-bezier(0.69, -0.55, 0.265, 1.55);
+
+}
+
+.section-3 .container-lista-hf ul li:hover{
+    transform: scale(1.2);
+
 }
 
 
@@ -290,7 +310,7 @@ nav.menu li a {
     padding-top: 15px;
 }
 
-.section-3 .container-lista-hf a {
+.section-3 .container-lista-hf span {
     color: #1FC0DA;
     text-decoration: none;
     margin: 40px 0px;
@@ -298,13 +318,14 @@ nav.menu li a {
 
 /*PROJETOS EM DESTAQUE*/
 
-.projetos {
+.section-4 {
     color: white;
     text-decoration: none;
     padding: 10px;
+    margin: 100px auto;
 }
 
-.projetos h2 {
+.section-4 h2 {
     font-size: 40px;
     text-align: left;
     font-weight: normal;
@@ -312,7 +333,7 @@ nav.menu li a {
     margin-bottom: 10px;
 }
 
-.projetos p {
+.section-4 p {
     display: block;
     font-size: 20px;
     text-align: left;
@@ -321,13 +342,16 @@ nav.menu li a {
     margin: 0px;
 }
 
-.projetos .container-projetos {
+.section-4 .container-projetos {
     display: flex;
-    width: 100%;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
     justify-content: center;
+    width: 100%;
 }
 
-.projetos .projeto.ativo {
+.section-4 .projeto.ativo, .projeto-i {
     text-align: center;
     align-items: center;
     margin: 20px;
@@ -335,18 +359,19 @@ nav.menu li a {
     height: 700px;
 }
 
-.projetos .projeto img {
+.section-4 .projeto a img , .projeto-i a img {
     width: 250px;
     height: 450px;
     padding: 0px;
-    margin:30px auto;
+    margin: 30px auto;
     border-radius: 15px;
     align-items: center;
     transition: transform 500ms cubic-bezier(0.69, -0.55, 0.265, 1.55);
+    cursor: pointer ;
     box-shadow: 1px 5px 10px black;
 }
 
-.projetos .projeto img:hover {
+.section-4 .projeto img:hover, .projeto-i img:hover {
     transform: scale(1.1);
 }
 
@@ -354,13 +379,15 @@ nav.menu li a {
     max-width: 400px;
     height: 100px;
     padding: 0px 50px;
-    
+
 }
-.projetos .projeto {
-   display: block;
-   width: 310px;
+
+.section-4 .projeto {
+    display: block;
+    width: 310px;
 }
-.projetos h3 {
+
+.section-4 h3 {
     font-size: 25px;
     margin: 0px;
     color: #1FC0DA;
@@ -368,35 +395,40 @@ nav.menu li a {
 }
 
 .informacoes-projeto p {
+    font-size: 17px;
     padding: 0px;
-    margin: 20px 0px;
+    margin: 5px 0px;
 }
 
-.projetos .projeto.ativo .informacoes-projeto .tecnologias ul {
+.section-4 .projeto.ativo .informacoes-projeto .tecnologias ul {
     list-style: none;
     display: flex;
     padding: 0px;
     justify-content: left;
 }
 
-.projetos .projeto.ativo .informacoes-projeto a {
+.section-4 .projeto.ativo .informacoes-projeto a {
     color: white;
     text-decoration: none;
     display: flex;
     justify-content: left;
 }
 
-#projetos .inativos{
-	display: none;
+
+#projetos .inativos {
+    display: none;
 }
 
+.projeto-i h3{
+    display: block;
+}
 
-.projetos .btn-mostrar-projetos {
+.section-4 .btn-mostrar-projetos {
     background-color: #1FC0DA;
     border-radius: 15px;
     color: #182B41;
     width: 180px;
-    padding: 20px ;
+    padding: 20px;
     font-size: 18px;
     font-weight: bold;
     margin: 20px auto;
@@ -407,7 +439,8 @@ nav.menu li a {
     border: none;
 }
 
-.projetos .btn-mostrar-projetos.remover {
+
+.section-4 .btn-mostrar-projetos.remover {
     display: none;
 }
 
@@ -425,7 +458,7 @@ nav.menu li a {
     }
 }
 
-footer p{
+footer p {
     background-color: #101726;
     margin: 0px;
     padding: 10px;
