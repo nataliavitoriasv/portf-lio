@@ -433,7 +433,7 @@ nav.menu li a {
     padding: 20px;
     font-size: 18px;
     font-weight: bold;
-    margin: 100px auto;
+    margin: 200px auto 20px auto;
     display: flex;
     justify-content: center;
     align-items: center;
